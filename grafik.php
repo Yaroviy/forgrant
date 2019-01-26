@@ -39,8 +39,8 @@ function result($table,$vibrat,$uslovie,$link=0)
 
 
 $datearr=array(1,0);
-$colors=array('2016'=>'red','2017'=>'yellow','2018'=>'blue');
-$colors1=array('2016'=>'green','2017'=>'blue','2018'=>'yellow');
+$colors=array('2015'=>'green','2016'=>'red','2017'=>'yellow','2018'=>'blue');
+$colors1=array('2015'=>'red','2016'=>'green','2017'=>'blue','2018'=>'yellow');
 
 
 function stvorennya_ciny($goods,$date,$sort)
@@ -68,14 +68,14 @@ function stvorennya_ciny($goods,$date,$sort)
 	return $str;
 }
 
-for($y=2016;$y<2019;$y++)
+for($y=2015;$y<2019;$y++)
 {
 	for($m=1;$m<13;$m++)
 	{
 		foreach($datearr as $key => $d)
 		{
 			$date=mktime(0,0,0,($d?$m:$m+1),$d,$y);
-			if($y==2016)
+			if($y==2015)
 			{
 				$labels.='"'.date('d.m',$date).'",';
 			}
@@ -188,8 +188,6 @@ window.onload = function() {
     var myLine = new Chart(document.getElementById("canvas_Line2").getContext("2d")).Line(mydata2,opt2);
 }
     </script>
-
-    <br /><br /><a href="index.php">Повернутись до товарів</a>;
   </body>
 </html>
 ';
